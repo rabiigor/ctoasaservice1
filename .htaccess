@@ -1,0 +1,209 @@
+# Apache Configuration for CTO-as-a-Service Website
+# For Linux/Apache hosting
+
+# Enable rewrite engine
+RewriteEngine On
+
+# Security Headers
+<IfModule mod_headers.c>
+    # Remove server signature
+    Header always unset X-Powered-By
+    
+    # Content Security Policy - Updated for modern web standards
+    Header always set Content-Security-Policy "default-src 'self' https:; script-src 'self' https: 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://static.zdassets.com; style-src 'self' https: 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https: data: https://fonts.gstatic.com; img-src 'self' https: data: blob:; media-src 'self' https:; connect-src 'self' https:; frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com; object-src 'none';"
+    
+    # Force HTTPS and include subdomains (comment out for local development)
+    # Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+    
+    # Prevent page from being displayed in frame/iframe
+    Header always set X-Frame-Options "SAMEORIGIN"
+    
+    # XSS Protection
+    Header always set X-XSS-Protection "1; mode=block"
+    
+    # Prevent MIME type sniffing
+    Header always set X-Content-Type-Options "nosniff"
+    
+    # Referrer Policy
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    
+    # Feature Policy / Permissions Policy
+    Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+</IfModule>
+
+# MIME Types for Fonts and Assets
+<IfModule mod_mime.c>
+    # Font MIME types
+    AddType application/font-woff .woff
+    AddType application/font-woff2 .woff2
+    AddType font/woff .woff
+    AddType font/woff2 .woff2
+    
+    # Other asset types
+    AddType text/css .css
+    AddType application/javascript .js
+    AddType application/json .json
+    AddType image/webp .webp
+    AddType video/mp4 .mp4
+    AddType image/svg+xml .svg
+    
+    # Favicon
+    AddType image/x-icon .ico
+</IfModule>
+
+# Cache Control and Expiration
+<IfModule mod_expires.c>
+    ExpiresActive On
+    
+    # Default expiration
+    ExpiresDefault "access plus 1 day"
+    
+    # HTML files (short cache for dynamic content)
+    ExpiresByType text/html "access plus 1 hour"
+    
+    # CSS and JavaScript
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType application/x-javascript "access plus 1 month"
+    
+    # Images
+    ExpiresByType image/png "access plus 1 month"
+    ExpiresByType image/jpg "access plus 1 month"
+    ExpiresByType image/jpeg "access plus 1 month"
+    ExpiresByType image/gif "access plus 1 month"
+    ExpiresByType image/svg+xml "access plus 1 month"
+    ExpiresByType image/webp "access plus 1 month"
+    ExpiresByType image/x-icon "access plus 1 year"
+    
+    # Fonts
+    ExpiresByType application/font-woff "access plus 1 year"
+    ExpiresByType application/font-woff2 "access plus 1 year"
+    ExpiresByType font/woff "access plus 1 year"
+    ExpiresByType font/woff2 "access plus 1 year"
+    
+    # Videos
+    ExpiresByType video/mp4 "access plus 1 month"
+    
+    # Documents
+    ExpiresByType application/pdf "access plus 1 month"
+    ExpiresByType application/json "access plus 1 day"
+</IfModule>
+
+# Alternative cache control using headers (fallback)
+<IfModule mod_headers.c>
+    # Cache static assets
+    <FilesMatch "\.(css|js|png|jpg|jpeg|gif|ico|svg|woff|woff2|webp|mp4|pdf)$">
+        Header set Cache-Control "public, max-age=2592000"
+        Header unset ETag
+    </FilesMatch>
+    
+    # Short cache for HTML files
+    <FilesMatch "\.(html|htm|php)$">
+        Header set Cache-Control "public, max-age=3600"
+    </FilesMatch>
+</IfModule>
+
+# Enable compression
+<IfModule mod_deflate.c>
+    # Compress text-based files
+    AddOutputFilterByType DEFLATE text/plain
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/xml
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE application/xml
+    AddOutputFilterByType DEFLATE application/xhtml+xml
+    AddOutputFilterByType DEFLATE application/rss+xml
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/x-javascript
+    AddOutputFilterByType DEFLATE application/json
+    AddOutputFilterByType DEFLATE image/svg+xml
+    
+    # Don't compress already compressed files
+    SetEnvIfNoCase Request_URI \
+        \.(?:gif|jpe?g|png|rar|zip|exe|flv|mov|wma|mp3|avi|swf|mp?g|mp4|webm|webp|pdf)$ no-gzip dont-vary
+</IfModule>
+
+# Security: Protect sensitive files and directories
+<FilesMatch "^(\.htaccess|\.htpasswd|\.env|composer\.json|composer\.lock|package\.json|package-lock\.json|\.git)">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# Protect PHP configuration and log files
+<FilesMatch "\.(ini|log|conf)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# Prevent access to vendor directory browsing
+<IfModule mod_rewrite.c>
+    RewriteRule ^vendor/.*$ - [F,L]
+    RewriteRule ^node_modules/.*$ - [F,L]
+</IfModule>
+
+# Block suspicious request methods
+<IfModule mod_rewrite.c>
+    RewriteCond %{REQUEST_METHOD} ^(TRACE|TRACK|PROPFIND|PROPPATCH|MKCOL|COPY|MOVE|LOCK|UNLOCK|PUT|DELETE|HEAD|OPTIONS)$ [NC]
+    RewriteRule .* - [F,L]
+</IfModule>
+
+# URL Rewriting Rules
+<IfModule mod_rewrite.c>
+    # Ensure www or non-www consistency (uncomment preferred version)
+    # Force www:
+    # RewriteCond %{HTTP_HOST} ^cto-as-a-service\.co\.il [NC]
+    # RewriteRule ^(.*)$ https://www.cto-as-a-service.co.il/$1 [R=301,L]
+    
+    # Force non-www:
+    # RewriteCond %{HTTP_HOST} ^www\.cto-as-a-service\.co\.il [NC]
+    # RewriteRule ^(.*)$ https://cto-as-a-service.co.il/$1 [R=301,L]
+    
+    # Force HTTPS (uncomment for production)
+    # RewriteCond %{HTTPS} off
+    # RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+    
+    # Clean URLs - remove .php extension (optional)
+    # RewriteCond %{REQUEST_FILENAME} !-d
+    # RewriteCond %{REQUEST_FILENAME} !-f
+    # RewriteRule ^([^\.]+)$ $1.php [NC,L]
+    
+    # Redirect old URLs if needed (example)
+    # RewriteRule ^old-page/?$ /new-page [R=301,L]
+</IfModule>
+
+# Custom Error Pages
+ErrorDocument 404 /index.php
+ErrorDocument 403 /index.php
+ErrorDocument 500 /index.php
+
+# Disable directory browsing
+Options -Indexes
+
+# Follow symbolic links
+Options +FollowSymLinks
+
+# Prevent hotlinking (uncomment and adjust domain)
+# <IfModule mod_rewrite.c>
+#     RewriteCond %{HTTP_REFERER} !^$
+#     RewriteCond %{HTTP_REFERER} !^https?://(www\.)?cto-as-a-service\.co\.il [NC]
+#     RewriteRule \.(jpg|jpeg|png|gif|webp|svg)$ - [F]
+# </IfModule>
+
+# PHP Settings (if allowed by host)
+<IfModule mod_php7.c>
+    # Hide PHP version
+    php_flag expose_php Off
+    
+    # Security settings
+    php_flag allow_url_fopen Off
+    php_flag allow_url_include Off
+    
+    # Error handling (set to Off in production)
+    php_flag display_errors Off
+    php_flag log_errors On
+    
+    # Session security
+    php_value session.cookie_httponly 1
+    php_value session.cookie_secure 1
+    php_value session.use_only_cookies 1
+</IfModule>
