@@ -1,0 +1,148 @@
+$color-yellow: #fbbe05;
+$color-main: #031829;
+$color-red: rgb(239, 38, 38);
+
+
+
+body {
+  font-family: Montserrat, Verdana, Arial, sans-serif;
+  font-weight: 400;
+  line-height: 1.5em;
+  color: $color-main;
+  font-size: 17px;
+  /*min-width: 400px;*/
+
+  background-image: url("/assets/images/matching-services/bg.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-color: #05111A;
+}
+
+
+main {
+  section {
+    padding: 60px 0;
+  }
+
+  h1 {
+    font-size: 72px;
+    font-weight: 400;
+    color: $color-yellow;
+  }
+
+  h2 {
+    font-size: 48px;
+    font-weight: 400;
+    color: $color-yellow;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  h3 {
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 1.5em;
+    color: white;
+  }
+
+  p {
+    font-size:20px;
+    font-weight: 400;
+    line-height: 1.5em;
+    color: white;
+  }
+
+  hr {
+    border-top-color: $color-yellow;
+    width: 70%;
+    margin: 3rem auto;
+    max-width: 900px;
+    opacity: 1;
+    border-top-width: 4px;
+  }
+
+  .text-orange {
+    color: $color-yellow;
+  }
+
+  .row > * {
+    margin-top: 30px;
+  }
+
+  .btn {
+    &.btn-yellow {
+      background-color: $color-yellow;
+      display: inline-block;
+      height: 50px;
+      line-height: 50px;
+      padding: 0 60px;
+      border-radius: 0;
+      font-weight: 400;
+      color: #1f5381;
+
+      &:hover {
+        background-color: #eab103;
+      }
+    }
+
+    &.btn-blue {
+      background-color: #1F5381;
+      display: inline-block;
+      height: 50px;
+      line-height: 50px;
+      padding: 0 60px;
+      border-radius: 0;
+      font-weight: 400;
+      color: white;
+      font-size: 20px;
+
+      &:hover {
+        background-color: #184165;
+      }
+    }
+  }
+
+  .img-wrap {
+    text-align: center;
+    margin: 30px auto;
+
+    img {
+      text-align: center;
+      margin: auto;
+    }
+  }
+
+  .top {
+    padding: 100px 0 400px;
+
+    @media (max-width: 991px) {
+      text-align: center;
+      padding: 260px 0 200px;
+    }
+
+    .btn {
+      font-size: 24px;
+    }
+  }
+
+  .startup {
+
+  }
+
+  .partners {
+    background-image: url("/assets/images/matching-services/partners-bg.png");
+    background-repeat: no-repeat;
+    background-position: top center;
+    padding-top: 10px;
+  }
+
+  .backed-startups {
+    /*
+    .btn {
+      font-size: 30px;
+      height: 86px;
+      line-height: 86px;
+    }*/
+  }
+}
+

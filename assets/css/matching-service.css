@@ -1,0 +1,107 @@
+body {
+  font-family: Montserrat, Verdana, Arial, sans-serif;
+  font-weight: 400;
+  line-height: 1.5em;
+  color: #031829;
+  font-size: 17px;
+  /*min-width: 400px;*/
+  background-image: url("/assets/images/matching-services/bg.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-color: #05111A; }
+
+main section {
+  padding: 60px 0; }
+
+main h1 {
+  font-size: 72px;
+  font-weight: 400;
+  color: #fbbe05; }
+
+main h2 {
+  font-size: 48px;
+  font-weight: 400;
+  color: #fbbe05;
+  text-align: center;
+  margin-bottom: 30px; }
+
+main h3 {
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 1.5em;
+  color: white; }
+
+main p {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.5em;
+  color: white; }
+
+main hr {
+  border-top-color: #fbbe05;
+  width: 70%;
+  margin: 3rem auto;
+  max-width: 900px;
+  opacity: 1;
+  border-top-width: 4px; }
+
+main .text-orange {
+  color: #fbbe05; }
+
+main .row > * {
+  margin-top: 30px; }
+
+main .btn.btn-yellow {
+  background-color: #fbbe05;
+  display: inline-block;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 60px;
+  border-radius: 0;
+  font-weight: 400;
+  color: #1f5381; }
+  main .btn.btn-yellow:hover {
+    background-color: #eab103; }
+
+main .btn.btn-blue {
+  background-color: #1F5381;
+  display: inline-block;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 60px;
+  border-radius: 0;
+  font-weight: 400;
+  color: white;
+  font-size: 20px; }
+  main .btn.btn-blue:hover {
+    background-color: #184165; }
+
+main .img-wrap {
+  text-align: center;
+  margin: 30px auto; }
+  main .img-wrap img {
+    text-align: center;
+    margin: auto; }
+
+main .top {
+  padding: 100px 0 400px; }
+  @media (max-width: 991px) {
+    main .top {
+      text-align: center;
+      padding: 260px 0 200px; } }
+  main .top .btn {
+    font-size: 24px; }
+
+main .partners {
+  background-image: url("/assets/images/matching-services/partners-bg.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+  padding-top: 10px; }
+
+main .backed-startups {
+  /*
+    .btn {
+      font-size: 30px;
+      height: 86px;
+      line-height: 86px;
+    }*/ }
