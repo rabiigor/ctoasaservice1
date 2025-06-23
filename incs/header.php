@@ -47,9 +47,7 @@
                        
                     </div>
                 </nav>
-                <a href="/">
-                    <img src="assets/images/ir.png"/>
-                </a>
+                <img src="assets/images/ir.png"/>
             </div>
         </div>
     </div>
