@@ -19,10 +19,6 @@
                             </li>
                             <li class="nav-item d-lg-none">
                                 <?php /*<a class="nav-link" aria-current="page" href="#contact-us-form">Contact us</a> */ ?>
-
-                                <a class="nav-link" aria-current="page" href="https://forms.gle/rexQe7ggdCR2jVw49" target="_blank">
-                                    Apply now
-                                </a>
                             </li>
                             <!--
                            <li class="nav-item">
@@ -35,16 +31,6 @@
                                </span>
                            </li>-->
                         </ul>
-                    </div>
-                    <div class="video-btn-wrap text-center d-none d-lg-inline-block">
-                        <?php /*
-                        <a href="#contact-us-form" class="video-icon">
-                            <span>Contact us</span>
-                        </a> */ ?>
-                        <a href="https://forms.gle/rexQe7ggdCR2jVw49" class="video-icon" target="_blank">
-                            <span>Apply now</span>
-                        </a>
-                       
                     </div>
                 </nav>
                 <img src="assets/images/ir.png"/>
