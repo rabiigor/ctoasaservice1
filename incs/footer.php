@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-6" data-aos="flip-up">
-                    <img src="/assets/images/igor.png" class="img-fluid"/>
+                    <img src="assets/images/igor.png" class="img-fluid"/>
                 </div>
                 <div class="col-12 col-md-6" data-aos="flip-down">
                     <h2>About myself</h2>
@@ -23,7 +23,7 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                     <path fill="#f4ba07" d="M256 8C118.941 8 8 118.919 8 256c0 137.059 110.919 248 248 248 48.154 0 95.342-14.14 135.408-40.223 12.005-7.815 14.625-24.288 5.552-35.372l-10.177-12.433c-7.671-9.371-21.179-11.667-31.373-5.129C325.92 429.757 291.314 440 256 440c-101.458 0-184-82.542-184-184S154.542 72 256 72c100.139 0 184 57.619 184 160 0 38.786-21.093 79.742-58.17 83.693-17.349-.454-16.91-12.857-13.476-30.024l23.433-121.11C394.653 149.75 383.308 136 368.225 136h-44.981a13.518 13.518 0 0 0-13.432 11.993l-.01.092c-14.697-17.901-40.448-21.775-59.971-21.775-74.58 0-137.831 62.234-137.831 151.46 0 65.303 36.785 105.87 96 105.87 26.984 0 57.369-15.637 74.991-38.333 9.522 34.104 40.613 34.103 70.71 34.103C462.609 379.41 504 307.798 504 232 504 95.653 394.023 8 256 8zm-21.68 304.43c-22.249 0-36.07-15.623-36.07-40.771 0-44.993 30.779-72.729 58.63-72.729 22.292 0 35.601 15.241 35.601 40.77 0 45.061-33.875 72.73-58.161 72.73z"/>
                                 </svg>
-                                <a href="mailto:rabiigor@gmail.com">rabiigor@gmail.com</a>
+                                <a href="mailto:rabiigor@cto-as-a-service.co.il">rabiigor@cto-as-a-service.co.il</a>
                             </div>
                             <?php /*
                             <div class="mb-3">
@@ -48,28 +48,6 @@
                     </div>
                 </div>
             </div>
-            <div class="row mt-5">
-                <h2 class="col-12" style="margin-bottom: 0" id="contact-us-form">Contact us</h2>
-                <h3 class="col-12 mt-5 d-none" id="form-success">Thank you! We will contact you shortly.</h3>
-            </div>
-            <form class="row" data-aos="flip-up">
-                <div class="col-12 col-lg-3">
-                    <!--<label for="exampleFormControlInput1" class="form-label">Name</label>-->
-                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Name" name="name" required/>
-                </div>
-                <div class="col-12 col-lg-3">
-                    <!--<label for="exampleFormControlInput2" class="form-label">Email</label>-->
-                    <input type="email" class="form-control" id="exampleFormControlInput2" placeholder="Email" name="email" required/>
-                </div>
-                <div class="col-12 col-lg-5">
-                    <!--<label for="exampleFormControlTextarea1" class="form-label">Message</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="message"></textarea>-->
-                    <input type="text" class="form-control" placeholder="Message" name="message" minlength="5" required/>
-                </div>
-                <div class="col-12 col-lg-1">
-                    <button type="submit" class="btn btn-primary">Send</button>
-                </div>
-            </form>
             <!--
             <div class="row">
                 <div class="col col-md-8 offset-md-2 col-lg-6 offset-lg-3 text-center">
@@ -96,7 +74,7 @@
                     <a class="nav-link" aria-current="page" href="/#for-startups">CTO for Startups</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="/innovate-momentum-hub.php">Innovate Momentum Hub</a>
+                    <a class="nav-link" aria-current="page" href="https://www.p2s-israel.co.il" target="_blank">Innovate Momentum Hub</a>
                 </li>
                 <!--
                 <li class="nav-item">
@@ -115,9 +93,9 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 -->
 
-<script src="/assets/vendor/jquery.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="/assets/vendor/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-<script src="/assets/vendor/jquery.validate.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="assets/vendor/jquery.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="assets/vendor/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+<script src="assets/vendor/jquery.validate.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <!--
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>-->

@@ -15,12 +15,12 @@
                                 <a class="nav-link" aria-current="page" href="/#for-startups">CTO for Startups</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="/innovate-momentum-hub.php">Innovate Momentum Hub</a>
+                                <a class="nav-link" aria-current="page" href="https://www.p2s-israel.co.il" target="_blank">Innovate Momentum Hub</a>                                
                             </li>
                             <li class="nav-item d-lg-none">
                                 <?php /*<a class="nav-link" aria-current="page" href="#contact-us-form">Contact us</a> */ ?>
 
-                                <a class="nav-link" aria-current="page" href="https://forms.gle/Keg9HTZUet44Nixw8" target="_blank">
+                                <a class="nav-link" aria-current="page" href="https://forms.gle/rexQe7ggdCR2jVw49" target="_blank">
                                     Apply now
                                 </a>
                             </li>
@@ -41,14 +41,14 @@
                         <a href="#contact-us-form" class="video-icon">
                             <span>Contact us</span>
                         </a> */ ?>
-                        <a href="https://forms.gle/Keg9HTZUet44Nixw8" class="video-icon" target="_blank">
+                        <a href="https://forms.gle/rexQe7ggdCR2jVw49" class="video-icon" target="_blank">
                             <span>Apply now</span>
                         </a>
                        
                     </div>
                 </nav>
                 <a href="/">
-                    <img src="/assets/images/ir.png"/>
+                    <img src="assets/images/ir.png"/>
                 </a>
             </div>
         </div>

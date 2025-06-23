@@ -1,9 +1,9 @@
-<?php include ($_SERVER['DOCUMENT_ROOT'].'/incs/head.php'); ?>
+<?php include (__DIR__.'/incs/head.php'); ?>
 
-<link href="/assets/css/home.css?v=2.7.0" rel="stylesheet"/>
+<link href="assets/css/home.css?v=2.7.0" rel="stylesheet"/>
 
 <body>
-    <?php include ($_SERVER['DOCUMENT_ROOT'].'/incs/header.php'); ?>
+    <?php include (__DIR__.'/incs/header.php'); ?>
 
     <main>
         <section class="top">
@@ -119,7 +119,7 @@
                     <div class="row text-start yellow" data-aos="fade-down">
                         <div class="col-10 col-md-3 offset-1">
                             <div class="img-wrap">
-                                <img src="/assets/images/services/equity.png"/>
+                                <img src="assets/images/services/equity.png"/>
                             </div>
                             <h5>Private Equity</h5>
                             <ul class="items">
@@ -130,7 +130,7 @@
                         </div>
                         <div class="col-10 col-md-3 offset-1">
                             <div class="img-wrap">
-                                <img src="/assets/images/services/investors.png"/>
+                                <img src="assets/images/services/investors.png"/>
                             </div>
                             <h5>Foreign Investors</h5>
                             <ul class="items">
@@ -141,7 +141,7 @@
                         </div>
                         <div class="col-10 col-md-3 offset-1">
                             <div class="img-wrap">
-                                <img src="/assets/images/services/vc2.png"/>
+                                <img src="assets/images/services/vc2.png"/>
                             </div>
                             <h5>Growth Stage VC</h5>
                             <ul class="items">
@@ -150,7 +150,7 @@
                         </div>
                         <div class="col-10 col-md-3 offset-1">
                             <div class="img-wrap">
-                                <img src="/assets/images/services/vc1.png"/>
+                                <img src="assets/images/services/vc1.png"/>
                             </div>
                             <h5>Early Stage VC</h5>
                             <ul class="items">
@@ -159,7 +159,7 @@
                         </div>
                         <div class="col-10 col-md-3 offset-1">
                             <div class="img-wrap">
-                                <img src="/assets/images/services/vc3.png"/>
+                                <img src="assets/images/services/vc3.png"/>
                             </div>
                             <h5>Law firm</h5>
                             <ul class="items">
@@ -168,7 +168,7 @@
                         </div>
                         <div class="col-10 col-md-3 offset-1">
                             <div class="img-wrap">
-                                <img src="/assets/images/services/accelerators.png"/>
+                                <img src="assets/images/services/accelerators.png"/>
                             </div>
                             <h5>Accelerator</h5>
                             <ul class="items">
@@ -186,7 +186,7 @@
                         <div class="col-10 col-md-3 offset-1">
                             <div class="text-center">
                                 <div class="img-wrap">
-                                    <img src="/assets/images/advantages/costs.png"/>
+                                    <img src="assets/images/advantages/costs.png"/>
                                 </div>
                             </div>
                             <h5>LOWER COSTS</h5>
@@ -201,7 +201,7 @@
                         <div class="col-10 col-md-3 offset-1">
                             <div class="text-center">
                                 <div class="img-wrap">
-                                    <img src="/assets/images/advantages/fast.png"/>
+                                    <img src="assets/images/advantages/fast.png"/>
                                 </div>
                             </div>
                             <h5>FAST SERVICE</h5>
@@ -214,7 +214,7 @@
                         <div class="col-10 col-md-3 offset-1">
                             <div class="text-center">
                                 <div class="img-wrap">
-                                    <img src="/assets/images/advantages/flexibility.png"/>
+                                    <img src="assets/images/advantages/flexibility.png"/>
                                 </div>
                             </div>
                             <h5>FLEXIBILITY</h5>
@@ -256,7 +256,7 @@
                             <p class="smartexe-wrap">
                                 <strong class="text-orange">POWERED by</strong>
                                 <a href="https://smartexe.com/" target="_blank">
-                                    <img src="/assets/images/smart-exe.png"/>
+                                    <img src="assets/images/smart-exe.png"/>
                                 </a>
                             </p>-->
                         </div>
@@ -297,7 +297,7 @@
                     <div class="row" id="learn-more-links" data-aos="flip-down">
                         <div class="col-12 col-md-4">
                             <div class="img-wrap">
-                                <img src="/assets/images/packages/rates.png"/>
+                                <img src="assets/images/packages/rates.png"/>
                             </div>
                             <h5>HOURLY RATES</h5>
                             <p>Pay as you go with affordable hourly rates, easily extend/reduce hours</p>
@@ -307,7 +307,7 @@
                         </div>
                         <div class="col-12 col-md-4">
                             <div class="img-wrap">
-                                <img src="/assets/images/packages/project.png"/>
+                                <img src="assets/images/packages/project.png"/>
                             </div>
                             <h5>PROJECT BASED</h5>
                             <p>Avoid recruiting an internal CTO, focus on the service</p>
@@ -317,7 +317,7 @@
                         </div>
                         <div class="col-12 col-md-4">
                             <div class="img-wrap">
-                                <img src="/assets/images/packages/model.png"/>
+                                <img src="assets/images/packages/model.png"/>
                             </div>
                             <h5>FLEXIBLE WORK MODEL</h5>
                             <p>Switch from short-term to long-term work paradigms as needed</p>
@@ -331,7 +331,7 @@
         </div>
     </main>
 
-    <?php include ($_SERVER['DOCUMENT_ROOT'].'/incs/footer.php'); ?>
+    <?php include (__DIR__.'/incs/footer.php'); ?>
 
 </body>
 
